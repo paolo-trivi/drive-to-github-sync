@@ -1,0 +1,34 @@
+google_drive:
+  # Path to your Google OAuth2 credentials JSON file (from Google Cloud Console)
+  credentials_file: "credentials.json"
+  # Token file path (auto-generated after first auth)
+  token_file: "token.json"
+  # Google Drive folder ID to watch (from the URL: drive.google.com/drive/folders/<FOLDER_ID>)
+  folder_id: "YOUR_DRIVE_FOLDER_ID"
+  # How often to poll for changes (seconds)
+  poll_interval: 60
+
+github:
+  # GitHub personal access token (needs repo scope)
+  token: "YOUR_GITHUB_TOKEN"
+  # Repository in format owner/repo-name
+  repository: "YOUR_USERNAME/YOUR_REPO"
+  # Branch to push changes to
+  branch: "main"
+  # Commit author details
+  commit_author_name: "Drive Sync Bot"
+  commit_author_email: "sync-bot@example.com"
+
+sync:
+  # Local staging directory for downloaded Drive files
+  staging_dir: "/tmp/drive-sync-staging"
+  # File types to sync (empty list means all types)
+  include_extensions: []
+  # File types to exclude
+  exclude_extensions:
+    - ".tmp"
+    - ".~lock"
+  # Subdirectory in the GitHub repo to place synced files
+  target_path: "synced"
+  # Whether to preserve Drive folder structure
+  preserve_structure: true
