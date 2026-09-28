@@ -4,5 +4,5 @@ google-auth-oauthlib==1.2.0
 PyGithub==2.2.0
 PyYAML==6.0.1
 watchdog==4.0.0
-requests==2.31.0
-python-dotenv==1.0.1
+requests==2.33.0
+python-dotenv==1.2.2
